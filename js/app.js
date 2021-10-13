@@ -58,21 +58,23 @@ const viewInfoDom = (characters) =>{
     const mapCharacters = characters.map((view)=>{
         return `
         <div class="cards">
-        <div class="name-character">
-            <h1>${view.name}</h1> 
-        </div>
+            <div class="name-character">
+                <h1>${view.name}</h1> 
+            </div>
         <div class="house-character">
             <h2>House</h2> 
             <p>${view.house}</p
         </div>
         <div class="patronus">
-        <h3>Patronus</h3> 
-        <p>${view.patronus}</p
+            <h3>Patronus</h3> 
+            <p>${view.patronus}</p
     </div>
         <div class="photo_character">
             <img src="${view.image}" alt="${view.name}">
         </div>
-    </div> `
+    </div> 
+    <button id='save_character'>Guardar</button>
+    `
     })
     .join('')
     contentMainCards.innerHTML = mapCharacters 
